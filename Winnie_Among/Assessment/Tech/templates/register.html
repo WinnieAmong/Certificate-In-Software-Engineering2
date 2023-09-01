@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<div class="card">
+    <div class="card body" style="background-color: aliceblue;">
+        <h3 style="background-color: black; color: white;">GENQ KYC FORM</h3>
+        <form class="form-control" method="POST" enctype="multipart/form-data" action="/register/"style="width: 100%;">
+            <h3>Bio Data</h3>
+            {% csrf_token %}
+            <input type="text" name="First_name" placeholder="Please Enter Your First_name" required  style="width: 90%;">
+            <br><br>
+            <input type="text" name="last_name" placeholder="Please Enter your last_name " required  style="width: 90%;">
+            <br><br>
+            <input type="number" name="Date_Of_Birth" placeholder="Please Enter Your Date_Of_Birth(DD/MM/YYY)" required  style="width: 90%;">
+            <br>
+            <br>
+            <input type="text" name="Genda" placeholder="Select Your Genda" required style="width: 90%;"  style="width: 90%;">
+            <br>
+            <br>
+            <h3>Location</h3>
+            <input type="text" name="Country" placeholder="Please Enter your country " required  style="width: 90%;">
+            <br>
+            <br>
+            <input type="text" name="Town" placeholder="Please Enter Your town here" required  style="width: 90%;">
+            <br>
+            <br>
+            <input type="text" name="District" placeholder="Please Enter Your District" required  style="width: 90%;">
+            <br>
+            <br>
+            <input type="text" name="Zip_code" placeholder="Please Enter your Zip_code " required  style="width: 90%;">
+            <br><br>
+            <h3>Contacts and Address</h3>
+            <input type="number" name="Phone_Number1" placeholder=" Phone_Number1" required  style="width: 90%;">
+            <br><br>
+            <input type="number" name="Phone_Number2" placeholder="Phone_Number2" required  style="width: 90%;">
+            <br><br>
+            <input type="text" name="Email" placeholder="Email" required  style="width: 90%;">
+            <br><br>
+            <input type="submit" class="btn btn-lg btn-outline-success" value="SUBMIT">
+            
+        </form>
+
+    </div>
+
+</div>
+{% endblock %}
